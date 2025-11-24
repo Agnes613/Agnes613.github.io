@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我 | Agnes</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍴</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { dark: '#121212', light: '#f5f5f5', gray: {100: '#fafafa', 200: '#eaeaea', 800: '#262626', 900: '#1a1a1a'} },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>body{background:#fafafa;color:#121212;}::-webkit-scrollbar{width:6px;}::-webkit-scrollbar-thumb{background:#ccc;border-radius:3px;}html{scroll-behavior:smooth;}</style>
+</head>
+<body class="min-h-screen">
+    <nav class="fixed top-0 left-0 w-full z-50 bg-light/90 backdrop-blur-sm border-b border-gray-200">
+        <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-semibold tracking-tight">Agnes</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="about.html" class="text-dark font-medium">关于我</a>
+                <a href="food.html" class="text-gray-800 hover:text-dark transition-all 0.3s">美食评论</a>
+                <a href="contact.html" class="text-gray-800 hover:text-dark transition-all 0.3s">联系方式</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-gray-800"><i class="fa fa-bars text-xl"></i></button>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <div class="container mx-auto px-4 py-3 flex flex-col gap-3">
+                <a href="about.html" class="py-2 text-dark font-medium">关于我</a>
+                <a href="food.html" class="py-2 text-gray-800 hover:text-dark transition-all 0.3s">美食评论</a>
+                <a href="contact.html" class="py-2 text-gray-800 hover:text-dark transition-all 0.3s">联系方式</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container mx-auto px-4 md:px-6 pt-28 pb-20">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full md:w-1/2">
+                    <div class="relative rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://picsum.photos/id/64/600/800" alt="Agnes" class="w-full h-auto object-cover">
+                        <div class="absolute inset-0 border-2 border-white/20 pointer-events-none"></div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">关于我</h2>
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                        大家好，我是 Agnes。<br><br>
+                        「我们都不是白色的」—— 这是我对生活的理解。每个人都有自己的色彩与棱角，就像美食一样，没有绝对的“标准味”，只有真实的“体验感”。<br><br>
+                        我喜欢走街串巷探索美食，不追求网红打卡，只记录最真实的味蕾反馈。这个网站是我的美食评论聚集地，也是我与世界对话的小窗口。
+                    </p>
+                    <a href="food.html" class="inline-flex items-center text-dark font-medium hover:underline">
+                        查看我的美食评论 <i class="fa fa-long-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    </script>
+</body>
+</html>
