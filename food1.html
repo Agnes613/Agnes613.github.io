@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南京初樱日式料理 | Agnes美食评论</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍴</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { dark: '#121212', light: '#f5f5f5', gray: {100: '#fafafa', 200: '#eaeaea', 800: '#262626', 900: '#1a1a1a'} },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>body{background:#fafafa;color:#121212;}::-webkit-scrollbar{width:6px;}::-webkit-scrollbar-thumb{background:#ccc;border-radius:3px;}html{scroll-behavior:smooth;}</style>
+</head>
+<body class="min-h-screen">
+    <nav class="fixed top-0 left-0 w-full z-50 bg-light/90 backdrop-blur-sm border-b border-gray-200">
+        <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-semibold tracking-tight">Agnes</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="about.html" class="text-gray-800 hover:text-dark transition-all 0.3s">关于我</a>
+                <a href="food.html" class="text-dark font-medium">美食评论</a>
+                <a href="contact.html" class="text-gray-800 hover:text-dark transition-all 0.3s">联系方式</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-gray-800"><i class="fa fa-bars text-xl"></i></button>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <div class="container mx-auto px-4 py-3 flex flex-col gap-3">
+                <a href="about.html" class="py-2 text-gray-800 hover:text-dark transition-all 0.3s">关于我</a>
+                <a href="food.html" class="py-2 text-dark font-medium">美食评论</a>
+                <a href="contact.html" class="py-2 text-gray-800 hover:text-dark transition-all 0.3s">联系方式</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container mx-auto px-4 md:px-6 pt-28 pb-20">
+        <div class="max-w-4xl mx-auto">
+            <a href="food.html" class="inline-flex items-center text-gray-600 mb-8 hover:text-dark">
+                <i class="fa fa-arrow-left mr-2"></i> 返回美食评论
+            </a>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">南京初樱日式料理</h2>
+            <div class="flex items-center mb-8 text-yellow-500">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <span class="ml-2 text-gray-600 text-sm">5.0/5 | 日式料理</span>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-lg mb-10">
+                <img src="https://github.com/Agnes613/Agnes613.github.io/raw/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20251215194444.jpg" alt="南京初樱日式料理" class="w-full h-auto object-cover">
+            </div>
+            <div class="text-gray-600 leading-relaxed text-lg space-y-6">
+                <p>江浙沪性价比极高的平价日料，招牌的鹅肝寿司肥而不腻，最上面的白芝麻起到了增香的点睛之笔，这个鹅肝寿司是我目前在南京，杭州，上海，苏州四市吃过口感最好的鹅肝寿司。</p>
+                <p>这家店的用料实在，香煎牛舌是厚切，口感极佳，浇上柠檬汁之后，丰富了口味。这家店我去了几十次，是个人的“日料食堂”。</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    </script>
+</body>
+</html>
